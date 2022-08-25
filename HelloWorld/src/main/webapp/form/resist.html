@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입!</title>
+
+    <style>
+        li {
+            list-style-type: none;
+        }
+
+        fieldset {
+            width: 40%;
+        }
+
+        div {
+            width: 200%;
+            height: 200%;
+
+            padding-left: 30%;
+        }
+        tr,td{
+            border:1px dotted darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+
+
+        <h2>회원정보입력</h2>
+        <fieldset>
+
+            <table>
+                <tr>
+                    <li><label for="name">
+                            <th>이름</th>
+                            <td>
+                        </label> <input type="text" id="name"></td>
+                    </li>
+                </tr>
+                <tr>
+                    <li><label for="id">
+                            <th>아이디</th>
+                            <td>
+                        </label> <input type="text" id="id"></li>
+                    <button>중복확인</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <li><label for="pw">
+                            <th>비밀번호</th>
+                            <td>
+                        </label> <input type="password" id="pw"></li>
+                    </td>
+                </tr>
+                <tr>
+                    <li><label for="pwpw">
+                            <th>비밀번호확인</th>
+                            <td>
+                        </label> <input type="password" id="pwpw"></li>
+                    </td>
+                </tr>
+                <tr>
+                    <li><label for="birth">
+                            <th>생일/성별</th>
+                            <td>
+                        </label> <input type="date" id="birth"> &nbsp; 남<input type="radio" name="gender"> 여<input
+                            type="radio" name="gender"></li>
+                    </td>
+                </tr>
+                <tr>
+                    <li><label for="email">
+                            <th>이메일</th>
+                            <td>
+                        </label> <input type="text" id="email" name="email" value="">@
+                        <select name="email">
+                            <option value="">선택</option>
+                            <option value="">naver.com</option>
+                            <option value="">daum.net</option>
+                            <option value="">google.com</option>
+
+
+                        </select>
+                    </li>
+
+                    <button>중복확인</button>
+                    </td>
+                </tr>
+                <tr>
+                    <li><label for="tel">
+                            <th>휴대폰</th>
+                            <td>
+                        </label> <input type="text" id="tel"></li>
+                    </td>
+                </tr>
+                <tr>
+                    <li><label for="recommend">
+                            <th>추천인</th>
+                            <td>
+                        </label> <input type="text" id="recommend"></li>
+                    </td>
+                </tr>
+                <tr>
+                    <li><label for="newsmail">
+                            <th>뉴스메일</th>
+                            <td>
+                        </label>
+                        받습니다.<input type="radio" name="news" id="newsmail"> 받지않습니다.<input type="radio" name="news"
+                            id="newsmail"></li>
+                    </td>
+                </tr>
+                <tr>
+                    <li><label for="sns">
+                            <th>sns</th>
+                            <td>
+                        </label>
+                        받습니다.<input type="radio" name="sns" id="sns"> 받지않습니다.<input type="radio" name="sns" id="sns">
+                    </li>
+                    </td>
+                </tr>
+                <tr>
+                    <li><label for="webpush">
+                            <th>웹push알림</th>
+                            <td>
+                        </label>
+                        받습니다.<input type="radio" name="webpush" id="webpush"> 받지않습니다.<input type="radio" name="webpush"
+                            id="webpush"></li>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>오리들의 분노 상태!</th>
+                    <td>
+                        <meter value="95" max="100" low="10" high="90"></meter>
+                    </td>
+                </tr>
+                <tr>
+                    <th>오리소개</th>
+                    <td>
+                        <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+
+            </table>
+
+            <div>
+                
+                <img style="width: 10%;" src="../img/babyduck.jpg" alt="" usemap="#map">
+                 <map name="map">
+                    <area shape="rect" coords="10,10,40,40" href="https://www.naver.com" alt="" target="_blank">
+                 </map>
+                <img style="width: 10%;" src="../img/duck.jpg">
+               
+            </div>
+
+
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

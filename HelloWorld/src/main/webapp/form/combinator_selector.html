@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinator_selector</title>
+    <style>
+        div>p{
+            color:cornflowerblue;
+        }
+        p+span{
+            background-color: yellow;
+            border: 1px; color: black;
+        }
+        p~span{
+            font-size: 2em;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <h1>Heading</h1>
+    <div>
+        <p>paragraph1</p>
+        <p>paragraph2</p>
+        <span>
+         paragraph3<br>
+        </span>
+        <span>
+            span1
+        </span>
+    </div>
+    <p>paragraph4</p>
+    <span>
+        paragraph3<br>
+       </span>
+    
+</body>
+</html>
