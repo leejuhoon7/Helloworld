@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: pink;
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            padding-top: 15px;
+        
+        }
+                
+            </style>
+        </head>
+        <body>
+           <input type="text"   placeholder='글넣어보기'  onkeydown="alert('글쓰때마다 알림')">
+            <input type="text" value="" placeholder='글넣어보기'  onchange="alert('변화가있으면 알림')">
+            <br>
+            <br>
+            돌리기<input type="button" value="click" onclick="
+                document.querySelector('div').style.transform='rotate(365deg)';
+                document.querySelector('div').style.transition='3s'
+            
+            ">
+        
+            마음편히하기
+            <input type="button" value="click" onclick="
+                 document.querySelector('div').style.transform='rotate(-5deg)';
+                 document.querySelector('div').style.transition='3s'
+            
+            ">
+            
+            <div>
+                ㅇㅅㅇ
+        
+            </div>
+        
+        </body>
+</html>
