@@ -54,10 +54,11 @@
         cal += '<tr>';
         // 1일 위치지정.
 
+        let month = 10;
         
 
-        let empty = getEmptyCnt(1);
-        let lastday = getLastDay(1);
+        let empty = getEmptyCnt(month);
+        let lastday = getLastDay(month);
         for (let f = 0; f < empty; f++)
             cal += '<td></td>';
 
