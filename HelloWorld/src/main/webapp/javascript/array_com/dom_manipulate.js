@@ -21,6 +21,8 @@ inputid.setAttribute('name', 'user_id');
 inputid.setAttribute('id', 'user_id');
 frm.appendChild(inputid);
 
+let bbr=document.createElement('p');
+inputid.after(bbr);
 
 
 let labelPw = document.createElement('label');
@@ -35,9 +37,14 @@ inputPw.setAttribute('name', 'user_Pw');
 inputPw.setAttribute('Pw', 'user_Pw');
 frm.appendChild(inputPw);
 
+
+
 let button = document.createElement('button');
 button.innerText = '로그인';
 frm.appendChild(button);
+
+ bbr=document.createElement('p');
+inputPw.after(bbr);
 
 // div#show의 자식요소로 지정.
 document.getElementById('show').appendChild(frm);
