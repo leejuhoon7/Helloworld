@@ -53,7 +53,7 @@ public class MemberManage extends DAO {
 		int result = 0;
 		try {
 			conn();
-			String sql = "insert into bankMember (member_id, member_pw, " + "member_name, role) values (?,?,?,?)";
+			String sql = "insert into bankMember (member_id, member_pw, member_name, role) values (?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, member.getMemberId());
 			pstmt.setString(2, member.getMemberPw());
@@ -104,12 +104,12 @@ public class MemberManage extends DAO {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
-			
+
 			int r = pstmt.executeUpdate();
-			if(r > 0) {
+			if (r > 0) {
 				return true; // 정상적으로 처리 한건.
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -118,4 +118,52 @@ public class MemberManage extends DAO {
 		return false; // 정상처리 안된 경우.
 	}
 
+	public int updateMember(Member member) {
+		int result = 0;
+		try {
+
+			conn();
+			String sql = "insert into bankmember ( member_id, member_pw, member_name) values (?, ?, ?)";
+
+			pstmt.setString(1, member.getMemberPw());
+			pstmt.setString(2, member.getMemberName());
+			pstmt.setString(3, member.getAccountId());
+			result = pstmt.executeUpdate();
+
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+		}
+
+		return result;
+
+	}
+
+	public int updateMember2(Member member) {
+		int result = 0;
+		try {
+
+			conn();
+			String sql = "update bankmember set member_pw =?, member_name=? where  member_id=?";
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, member.getMemberPw());
+			pstmt.setString(2, member.getMemberName());
+			pstmt.setString(3, member.getAccountId());
+			result = pstmt.executeUpdate();
+
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+		}
+
+		return result;
+
+	}
 }

@@ -27,23 +27,6 @@ public class AddBankMemberServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		// a 태그의 파라미터 정보 읽어들이도록.
-		// ?id=user1&pw=1234&name=김사용&role=0
-		request.setCharacterEncoding("utf-8");
-		
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String nm = request.getParameter("name");
-		String rl = request.getParameter("role");
-		
-		Member member = new Member();
-		member.setMemberId(id);
-		member.setMemberPw(pw);
-		member.setMemberName(nm);
-		member.setRole(rl);
-		
-		MemberManage.getInstance().registCustomer(member);
-//		response.sendRedirect("index.html");
 		
 		
 	}
@@ -52,8 +35,25 @@ public class AddBankMemberServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		// a 태그의 파라미터 정보 읽어들이도록.
+				// ?id=user1&pw=1234&name=김사용&role=0
+				request.setCharacterEncoding("utf-8");
+				 response.setContentType("text/Json; charset = utf-8");
+				
+				String id = request.getParameter("id");
+				String pw = request.getParameter("pw");
+				String nm = request.getParameter("name");
+				String rl = request.getParameter("role");
+				
+				Member member = new Member();
+				member.setMemberId(id);
+				member.setMemberPw(pw);
+				member.setMemberName(nm);
+				member.setRole(rl);
+				
+				MemberManage.getInstance().registCustomer(member);
+//				response.sendRedirect("index.html");
+				
 	}
 
 }
